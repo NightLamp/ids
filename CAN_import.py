@@ -18,7 +18,8 @@ def simple_extract_data(arr):
     for i in range(arr_len):
         # extract data from raw data
         can_id = int(arr[i][1], 16)
-        data_point = [arr[i][0], can_id]
+        can_timestamp = arr[i][0] - arr[0][0]
+        data_point = [can_timestamp, can_id]
         # append datapoint and corresponding target to lists
         data.append(data_point) 
         target.append(arr[i][-1])
