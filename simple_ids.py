@@ -149,7 +149,7 @@ def predict_test_files(ids):
         
 
 def save_prediction(filename, data):
-    with open(filename, data) as fp:
+    with open(filename, 'w') as fp:
         fp.write('Class,Number')
         for i in range(len(data)):
             fp.write(str(i+1) + ',' + data[i] + '\n')
